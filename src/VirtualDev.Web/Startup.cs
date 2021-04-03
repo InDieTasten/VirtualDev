@@ -4,6 +4,8 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using System;
+using VirtualDev.Web.BotConnector;
 using VirtualDev.Web.Hubs;
 
 namespace VirtualDev.Web
@@ -48,6 +50,11 @@ namespace VirtualDev.Web
             });
 
             services.AddSignalR();
+
+            services.AddHttpClient<IRasaBotConnector, RasaBotConnector>(c =>
+            {
+                c.BaseAddress = new Uri(Configuration["Rasa:ServerRestEndpoint"]);
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

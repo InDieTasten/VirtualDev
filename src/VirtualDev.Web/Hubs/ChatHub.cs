@@ -1,13 +1,21 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.SignalR;
 using System.Threading.Tasks;
+using VirtualDev.Web.BotConnector;
 
 namespace VirtualDev.Web.Hubs
 {
     [Authorize]
     public class ChatHub : Hub
     {
+        private readonly IRasaBotConnector botConnector;
+
         private string CallerUserName => Context.User.FindFirst("urn:github:name")?.Value ?? "anonymous";
+
+        public ChatHub(IRasaBotConnector botConnector)
+        {
+            this.botConnector = botConnector;
+        }
 
         public async Task SendMessage(string message)
         {
@@ -15,10 +23,19 @@ namespace VirtualDev.Web.Hubs
             await Clients.Caller.SendAsync("ReceiveMessage", CallerUserName, message);
 
             // processing by bot
-            string replyMessage = message;
+            var botResponses = await botConnector.SendMessageAsync(new RasaRequest
+            {
+                ConversationId = CallerUserName,
+                Message = message
+            });
 
-            // reply only to the sending user
-            await Clients.Caller.SendAsync("ReceiveMessage", "VirtualDev", replyMessage);
+            foreach (var botResponse in botResponses)
+            {
+                if (botResponse.Type == RasaResponseTypes.Text)
+                    await Clients.Caller.SendAsync("ReceiveMessage", "VirtualDev", botResponse.Message);
+                if (botResponse.Type == RasaResponseTypes.Image)
+                    await Clients.Caller.SendAsync("ReceiveMessage", "VirtualDev", botResponse.ImageUrl);
+            }
         }
     }
 }
