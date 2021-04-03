@@ -6,3 +6,5 @@
 **/bin
 **/obj
 *.user
+/src/VirtualDev.Rasa/models
+/src/VirtualDev.Rasa/actions/__pycache__
