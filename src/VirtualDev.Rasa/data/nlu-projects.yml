@@ -1,0 +1,11 @@
+version: "2.0"
+
+nlu:
+- intent: list_projects
+  examples: |
+    - show me the projects
+    - can you list my projects
+    - what are the available projects
+    - what projects can I select
+    - list my projects
+    - display available projects
