@@ -11,3 +11,8 @@ rules:
   steps:
   - intent: bot_challenge
   - action: utter_iamabot
+
+- rule: Display projects anytime the user asks for projects
+  steps:
+  - intent: view_projects
+  - action: action_display_projects

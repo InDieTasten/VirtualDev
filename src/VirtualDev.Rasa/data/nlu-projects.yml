@@ -1,7 +1,7 @@
 version: "2.0"
 
 nlu:
-- intent: list_projects
+- intent: view_projects
   examples: |
     - show me the projects
     - can you list my projects
