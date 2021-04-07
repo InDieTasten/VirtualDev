@@ -11,10 +11,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Actions\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\VirtualDev.Database\VirtualDev.Database.csproj" />
   </ItemGroup>
 

@@ -12,16 +12,18 @@ namespace VirtualDev.Action.ActionServer
     {
         private readonly RequestDelegate next;
         private readonly ILogger<RasaActionServerMiddleware> logger;
-        private readonly IServiceProvider serviceProvider;
 
-        public RasaActionServerMiddleware(RequestDelegate next, ILogger<RasaActionServerMiddleware> logger, IServiceProvider serviceProvider)
+        public RasaActionServerMiddleware(RequestDelegate next, ILogger<RasaActionServerMiddleware> logger)
         {
             this.next = next;
             this.logger = logger;
-            this.serviceProvider = serviceProvider;
         }
 
-        public async Task Invoke(HttpContext httpContext, IOptions<RasaActionServerOptions> options, IActionHandlerTypeStore actionHandlerTypeStore)
+        public async Task Invoke(
+            HttpContext httpContext,
+            IOptions<RasaActionServerOptions> options,
+            IActionHandlerTypeStore actionHandlerTypeStore,
+            IServiceProvider serviceProvider)
         {
             if (httpContext.Request.Path == options.Value.WebhookUrl)
             {
