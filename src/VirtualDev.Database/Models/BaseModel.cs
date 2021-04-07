@@ -1,6 +1,6 @@
 ﻿using MongoDB.Bson.Serialization.Attributes;
 
-namespace VirtualDev.Web.Models
+namespace VirtualDev.Database.Models
 {
     public class BaseModel
     {

@@ -1,4 +1,4 @@
-﻿namespace VirtualDev.Web.Models
+﻿namespace VirtualDev.Database.Models
 {
     public class Project : BaseModel
     {
