@@ -4,6 +4,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using VirtualDev.Action.ActionServer;
+using VirtualDev.Database;
 
 namespace VirtualDev.Action
 {
@@ -19,6 +20,10 @@ namespace VirtualDev.Action
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddMongoDb(options =>
+            {
+                options.ConnectionString = Configuration["Mongo"]
+            })
             services.AddRasaActionServer(options =>
             {
                 options.WebhookUrl = "/webhook";
