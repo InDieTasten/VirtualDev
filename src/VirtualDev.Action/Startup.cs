@@ -22,8 +22,10 @@ namespace VirtualDev.Action
         {
             services.AddMongoDb(options =>
             {
-                options.ConnectionString = Configuration["Mongo"]
-            })
+                options.ConnectionString = Configuration["Mongo:ConnectionString"];
+                options.DatabaseName = Configuration["Mongo:DatabaseName"];
+            });
+
             services.AddRasaActionServer(options =>
             {
                 options.WebhookUrl = "/webhook";
