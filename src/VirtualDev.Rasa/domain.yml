@@ -8,7 +8,10 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
-  - list_projects
+  - view_projects
+
+actions:
+  - action_display_projects
 
 responses:
   utter_greet:

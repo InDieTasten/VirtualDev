@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.31025.218
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VirtualDev.Web", "VirtualDev.Web\VirtualDev.Web.csproj", "{13F35D3F-2370-4D18-96F0-F2F73A6EDB29}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VirtualDev.Action", "VirtualDev.Action\VirtualDev.Action.csproj", "{3058F56F-3BCB-4636-9936-3C4989CC743D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VirtualDev.Database", "VirtualDev.Database\VirtualDev.Database.csproj", "{8472F36C-DF2F-4EAB-8DF1-545BB51C2BCE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{13F35D3F-2370-4D18-96F0-F2F73A6EDB29}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{13F35D3F-2370-4D18-96F0-F2F73A6EDB29}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{13F35D3F-2370-4D18-96F0-F2F73A6EDB29}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3058F56F-3BCB-4636-9936-3C4989CC743D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3058F56F-3BCB-4636-9936-3C4989CC743D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3058F56F-3BCB-4636-9936-3C4989CC743D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3058F56F-3BCB-4636-9936-3C4989CC743D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8472F36C-DF2F-4EAB-8DF1-545BB51C2BCE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8472F36C-DF2F-4EAB-8DF1-545BB51C2BCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8472F36C-DF2F-4EAB-8DF1-545BB51C2BCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8472F36C-DF2F-4EAB-8DF1-545BB51C2BCE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
