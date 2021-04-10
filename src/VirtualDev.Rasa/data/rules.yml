@@ -14,5 +14,5 @@ rules:
 
 - rule: Map knowledgebase intent to knowledgebase action
   steps:
-  - intent: knowledge_base/query
+  - intent: knowledge_base_query
   - action: action_query_knowledge_base

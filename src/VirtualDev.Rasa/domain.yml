@@ -9,7 +9,7 @@ intents:
   - mood_unhappy
   - bot_challenge
   - view_projects
-  - knowledge_base/query
+  - knowledge_base_query
 
 actions:
   - action_display_projects
