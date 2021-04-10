@@ -1,7 +1,7 @@
 version: "2.0"
 
 nlu:
-- intent: knowledge_base/query
+- intent: knowledge_base_query
   examples: |
     - show me the [projects](EntityType)
     - can you list my [projects](EntityType)
