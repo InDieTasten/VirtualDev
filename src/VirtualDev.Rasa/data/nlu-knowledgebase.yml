@@ -1,0 +1,12 @@
+version: "2.0"
+
+nlu:
+- intent: knowledge_base/query
+  examples: |
+    - show me the [projects](EntityType)
+    - can you list my [projects](EntityType)
+    - what are the available [projects](EntityType)
+    - what [projects](EntityType) can I select
+    - list my [projects](EntityType)
+    - display available [projects](EntityType)
+

@@ -12,7 +12,7 @@ rules:
   - intent: bot_challenge
   - action: utter_iamabot
 
-- rule: Display projects anytime the user asks for projects
+- rule: Map knowledgebase intent to knowledgebase action
   steps:
-  - intent: view_projects
-  - action: action_display_projects
+  - intent: knowledge_base/query
+  - action: action_query_knowledge_base
