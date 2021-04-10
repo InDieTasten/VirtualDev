@@ -9,9 +9,11 @@ intents:
   - mood_unhappy
   - bot_challenge
   - view_projects
+  - knowledge_base/query
 
 actions:
   - action_display_projects
+  - action_query_knowledge_base
 
 responses:
   utter_greet:
