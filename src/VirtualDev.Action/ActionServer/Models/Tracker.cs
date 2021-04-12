@@ -8,8 +8,8 @@ namespace VirtualDev.Action.ActionServer.Models
         [JsonPropertyName("sender_id")]
         public string ConversationId { get; set; }
         [JsonPropertyName("slots")]
-        public Dictionary<string,string> Slots { get; set; }
+        public Dictionary<string,dynamic> Slots { get; set; }
         [JsonPropertyName("events")]
-        public dynamic[] Events { get; set; }
+        public RasaEvent[] Events { get; set; }
     }
 }

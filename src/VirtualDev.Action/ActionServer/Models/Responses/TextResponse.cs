@@ -1,6 +1,6 @@
 ﻿using System.Text.Json.Serialization;
 
-namespace VirtualDev.Action.ActionServer.Models.Responses
+namespace VirtualDev.Action.ActionServer.Models
 {
     public class TextResponse
     {
