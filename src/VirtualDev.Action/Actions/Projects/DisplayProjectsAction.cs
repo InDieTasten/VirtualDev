@@ -3,7 +3,6 @@ using System.Linq;
 using System.Threading.Tasks;
 using VirtualDev.Action.ActionServer;
 using VirtualDev.Action.ActionServer.Models;
-using VirtualDev.Action.ActionServer.Models.Responses;
 using VirtualDev.Database.Models;
 
 namespace VirtualDev.Action.Actions.Projects
