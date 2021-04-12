@@ -19,7 +19,7 @@ namespace VirtualDev.Action.Actions.Projects
 
         public async Task<RasaActionOutput> HandleAsync(RasaActionInput actionRequest)
         {
-            var projectsCollection = mongoDatabase.GetCollection<Project>("Projects");
+            var projectsCollection = mongoDatabase.GetCollection<Project>("projects");
             var cursor = await projectsCollection.FindAsync(project => true);
             var projects = await cursor.ToListAsync();
 
