@@ -2,29 +2,19 @@ version: "2.0"
 
 stories:
 
-- story: happy path
+- story: greeting
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: mood_great
-  - action: utter_happy
 
-- story: sad path 1
+- story: goodbye
   steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: affirm
-  - action: utter_happy
-
-- story: sad path 2
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: deny
+  - intent: goodbye
   - action: utter_goodbye
+
+- story: list and select project
+  steps:
+  - intent: kb_query
+  - action: action_query_knowledge_base
+  - intent: kb_resolve_entity
+  - action: action_resolve_entity
